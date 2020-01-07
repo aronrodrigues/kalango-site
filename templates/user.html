@@ -1,0 +1,41 @@
+<form name="user" action="user.php" method="POST">
+<table class="data">
+<caption>{OPERACAO}</caption>
+<tr>
+	<th>Nome</th>
+	<td><input type="text" name="txtName" value="{NAME}" /></td>
+</tr>
+<tr>
+	<th>E-mail</th>
+	<td><input type="text" name="txtEmail" value="{EMAIL}" /></td>
+</tr>
+<tr>
+	<th>Senha</th>
+	<td><input type="password" name="txtPassword1" value="{PASSWORD1}" /></td>
+</tr>
+<tr>
+	<th>Confirmação senha</th>
+	<td><input type="password" name="txtPassword2" value="{PASSWORD2}" /></td>
+</tr>
+<tr>
+	<td>{MESSAGE}</td>
+	<td align="right"><input type="submit" value="Enviar" /></td>
+</tr>
+</table>
+</form>
+
+<table class="data">
+<caption style="white-space: nowrap">Lista de usuários</caption>
+<tr>
+	<th>Nome</th>
+	<th>E-mail</th>
+	<th>Operação</th>
+</tr>
+<!-- BEGIN DYNAMIC BLOCK: user.row -->
+<tr>
+	<td><a href="{USER.LINK}">{NAME}</a></td>
+	<td>{EMAIL}</td>
+	<td><a href="{DELETE.LINK}">Delete</a></td>
+</tr>
+<!-- END DYNAMIC BLOCK: user.row -->
+</table>

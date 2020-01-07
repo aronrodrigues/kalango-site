@@ -1,0 +1,26 @@
+<form enctype="multipart/form-data" action="upload.php" method="POST">
+	<input type="hidden" name="hidOperation" value="{UPLOAD.OPERATION}" />
+	<input type="hidden" name="idNews" value="{UPLOAD.IDNEWS}" />
+	<table class="data">
+	<caption>{UPLOAD.OPERATION.TITLE}</caption>
+	<!-- Upload file -->
+	<tr>
+		<th>Enviar arquivo:</th>
+		<td><input name="userfile" type="file" /></td>
+	</tr>
+	<!-- Upload ou Edit content news -->
+	<tr>
+		<th>Título:</th>
+		<td><input type="text" size="65" name="txtTitulo" value="{UPLOAD.TITLE}" /></td>
+	</tr>
+	<tr>
+		<th valign="top"><label for="txaContent">Conteúdo:</label></th>
+		<td><textarea rows="6" cols="50" name="txaContent" id="txaContent">{UPLOAD.CONTENT}</textarea></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="right"><input type="submit" value="Enviar" /></td>
+	</tr>
+	</table>
+</form>
+{UPLOAD.MSG}
+

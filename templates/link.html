@@ -1,0 +1,21 @@
+<h1>Links</h1>
+
+<form action="link.php" method="POST">
+<table class="data" cellspacing="1" cellpadding="2">
+<caption>Páginas</caption>
+<tr>
+	<th width="30%">Endereço</th>
+	<th width="65%">Descrição</th>
+	{LINK.HEADER}
+</tr>
+<!-- BEGIN DYNAMIC BLOCK: link.item -->
+<tr>
+	<td><a href="{LINK.HREF}" target="_blank">{LINK.NAME}</a></td>
+	<td>{LINK.DESCRIPTION}</td>
+	{LINK.DELETE}
+</tr>
+<!-- END DYNAMIC BLOCK: link.item -->
+{LINK.ADD}
+</table>
+</form>
+{LINK.MSG}
